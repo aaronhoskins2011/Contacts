@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="addContact">Add Contact</string>
+    <string name="findContact">Find Contact</string>
+    <string name="removeContact">Remove Contact</string>
+    <string name="updateContact">Update Contact</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aaron.contacts.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etEMailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAddContact"
+        android:onClick="clickAddContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addContact"
+        />
+    <Button
+        android:id="@+id/btnFindContact"
+        android:onClick="clickFindContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/findContact"
+        />
+    <Button
+        android:id="@+id/btnRemoveContact"
+        android:onClick="clickRemoveContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/removeContact"
+        />
+    <Button
+        android:id="@+id/btnUpdateContact"
+        android:onClick="clickUpdateContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/updateContact"
+        />
+
+
+
+</LinearLayout>
