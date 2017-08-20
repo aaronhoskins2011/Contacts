@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,12 +24,12 @@ class AdapterContact extends ArrayAdapter<Contacts> {
         super(activity, textViewResourceId, contactsArrayList);
         try {
             this.activity = activity;
-            this.contact  = contact;
+            this.contact  = contactsArrayList;
 
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -48,6 +49,7 @@ class AdapterContact extends ArrayAdapter<Contacts> {
         public TextView name;
         public TextView eMail;
         public TextView phone;
+        public ImageView imgContact;
 
     }
 
@@ -62,22 +64,24 @@ class AdapterContact extends ArrayAdapter<Contacts> {
                 holder.name = (TextView) vi.findViewById(R.id.Name);
                 holder.eMail = (TextView) vi.findViewById(R.id.Email);
                 holder.phone = (TextView) vi.findViewById(R.id.Phone);
+                holder.imgContact = (ImageView)vi.findViewById(R.id.imgContact);
 
 
                 vi.setTag(holder);
             } else {
                 holder = (ViewHolder) vi.getTag();
             }
+            String fullName = contact.get(position).getFirstName() + contact.get(position).getLastName();
 
 
-
-            holder.name.setText(contact.get(position).getFirstName() + contact.get(position).getLastName());
+            holder.name.setText(fullName);
             holder.eMail.setText(contact.get(position).geteMailAddress());
             holder.phone.setText(contact.get(position).getPhoneNumber());
+            holder.imgContact.setImageBitmap(contact.get(position).getPhoto());
 
 
         } catch (Exception e) {
-
+            e.printStackTrace();
 
         }
         return vi;
